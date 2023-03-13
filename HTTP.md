@@ -66,3 +66,4 @@ CDN을 사용하면 본 서버는 캐시 서버에 데이터를 한 번씩만 �
   - 삭제 시에는 setMaxAge(0);
 3. 응답헤더에 쿠키 추가
   - response.addCookie(cookie);
+  - 
