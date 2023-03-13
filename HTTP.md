@@ -66,4 +66,14 @@ CDN을 사용하면 본 서버는 캐시 서버에 데이터를 한 번씩만 �
   - 삭제 시에는 setMaxAge(0);
 3. 응답헤더에 쿠키 추가
   - response.addCookie(cookie);
-  - 
+
+## 세션 동작방식
+### 세션 생성 방법
+- HttpSession session - request.getSession(boolean);
+  - true: 세션이 존재하지 않으면 새로 생성 (defult)
+  - false: 세션이 존재하지 않으면 null 리턴
+### 세션 삭제 방법
+- invalidate()
+- setMaxInactiveInterval(int interval) 메서드 사용
+  - 일정시간 요청 없으면 삭제 (cookie maxAge와 비슷)
+- web.xml에 설정 (분단위로 설정)
